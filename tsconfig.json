@@ -1,0 +1,18 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+    "compilerOptions": {
+      "baseUrl": ".", // Make sure the base URL is set correctly
+      "paths": {
+        "#blokkli/*": ["./node_modules/@blokkli/editor/*"] // Map the alias to the editor folder
+      },
+      "typeRoots": ["./types", "./node_modules/@types"], // Include any custom types if needed
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "target": "esnext",
+      "module": "esnext"
+    },
+    "include": ["nuxt.config.ts", "**/*.ts", "**/*.vue", "types/**/*.d.ts"]
+  
+}
